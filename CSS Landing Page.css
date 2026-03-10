@@ -56,7 +56,9 @@ header {
   border-radius: 50px;
   text-transform: uppercase;
 }
-
+.nav__btn {
+  user-select: none;
+}
 .hero {
   display: flex;
   flex-direction: column;
