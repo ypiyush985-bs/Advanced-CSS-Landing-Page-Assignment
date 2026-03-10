@@ -1,0 +1,120 @@
+
+.coke {
+  --brand-red: #F40009;
+  --bg: #ffffff;
+  --text: #F40009;
+  --card-bg: #fdfdfd;
+  --btn-bg: #F40009;
+  --btn-text: #ffffff;
+  --transition: 0.5s ease;
+}
+
+
+.coke:has(.coke__state:checked) {
+  --bg: #121212;
+  --text: #ffffff;
+  --card-bg: #1e1e1e;
+  --btn-bg: #ffffff;
+  --btn-text: #000000;
+}
+
+.coke__state { display: none; }
+
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: pop sans-serif;
+  margin: 0;
+  transition: all var(--transition);
+}
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg);
+    z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 5%;
+  align-items: center;
+}
+
+.nav__logo {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.nav__btn {
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid var(--text);
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+}
+
+.hero__headline {
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 800;
+}
+
+.showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 5% 5rem;
+}
+
+.item {
+  background-color: var(--card-bg);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.item--featured {
+  background-color: var(--brand-red);
+  color: white;
+}
+
+.item:hover {
+  transform: scale(1.03);
+}
+
+.item__name {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.footer__cta {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  padding: 1.5rem 4rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
